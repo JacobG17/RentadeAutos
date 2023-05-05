@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>UIAppFonts</key>
+  <array>
+	<string>ArchivoNarrow-Italic-VariableFont_wght.ttf</string>
+	<string>ArchivoNarrow-VariableFont_wght.ttf</string>
+	<string>Manrope-ExtraBold.ttf</string>
+	<string>Manrope-Medium.ttf</string>
+	<string>Manrope-Regular.ttf</string>
+	<string>Manrope-VariableFont_wght.ttf</string>
+	<string>MauiInfo.plist</string>
+	<string>OpenSans-Regular.ttf</string>
+	<string>OpenSans-Semibold.ttf</string>
+	<string>Roboto-BoldItalic.ttf</string>
+	<string>Roboto-Italic.ttf</string>
+	<string>Roboto-Medium.ttf</string>
+	<string>Roboto-Regular.ttf</string>
+  </array>
+  <key>UILaunchStoryboardName</key>
+  <string>MauiSplash</string>
+
+</dict>
+</plist>

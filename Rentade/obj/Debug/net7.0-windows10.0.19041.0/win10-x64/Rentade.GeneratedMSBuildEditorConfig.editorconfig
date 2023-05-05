@@ -1,0 +1,59 @@
+is_global = true
+build_property.TargetFramework = net7.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Rentade
+build_property.ProjectDir = C:\Users\aleja\Downloads\Rentade\Rentade\Rentade\
+
+[C:/Users/aleja/Downloads/Rentade/Rentade/Rentade/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Rentade.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/aleja/Downloads/Rentade/Rentade/Rentade/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Rentade.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/aleja/Downloads/Rentade/Rentade/Rentade/pages/Galeria.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Rentade.pages.Galeria.xaml
+build_metadata.AdditionalFiles.TargetPath = pages\Galeria.xaml
+build_metadata.AdditionalFiles.RelativePath = pages\Galeria.xaml
+
+[C:/Users/aleja/Downloads/Rentade/Rentade/Rentade/pages/Historial.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Rentade.pages.Historial.xaml
+build_metadata.AdditionalFiles.TargetPath = pages\Historial.xaml
+build_metadata.AdditionalFiles.RelativePath = pages\Historial.xaml
+
+[C:/Users/aleja/Downloads/Rentade/Rentade/Rentade/pages/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Rentade.pages.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = pages\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = pages\MainPage.xaml
+
+[C:/Users/aleja/Downloads/Rentade/Rentade/Rentade/pages/Registro.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Rentade.pages.Registro.xaml
+build_metadata.AdditionalFiles.TargetPath = pages\Registro.xaml
+build_metadata.AdditionalFiles.RelativePath = pages\Registro.xaml
+
+[C:/Users/aleja/Downloads/Rentade/Rentade/Rentade/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Rentade.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/aleja/Downloads/Rentade/Rentade/Rentade/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Rentade.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

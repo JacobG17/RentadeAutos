@@ -1,0 +1,108 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>Rentade</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>Rentade</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.rentade</ApplicationId>
+		<ApplicationIdGuid>aec8c233-fb67-43e6-8cf8-2e1bda562de1</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Syncfusion.Maui.Core" Version="20.4.54" />
+		<PackageReference Include="Syncfusion.Maui.Calendar" Version="20.4.53" />
+		<PackageReference Include="MongoDB.Driver" Version="2.19.0" />
+		<PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.4.54" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="pages\" />
+	  <None Remove="Resources\Images\carrito.png" />
+	  <None Remove="Resources\Images\historial.png" />
+	  <None Remove="Resources\Images\registro.png" />
+	  <None Remove="Resources\Fonts\ArchivoNarrow-Italic-VariableFont_wght.ttf" />
+	  <None Remove="Resources\Fonts\ArchivoNarrow-VariableFont_wght.ttf" />
+	  <None Remove="Resources\Fonts\Manrope-VariableFont_wght.ttf" />
+	  <None Remove="Resources\Fonts\Manrope-ExtraBold.ttf" />
+	  <None Remove="Resources\Fonts\Manrope-Medium.ttf" />
+	  <None Remove="Resources\Fonts\Roboto-Medium.ttf" />
+	  <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+	  <None Remove="Resources\Images\tesla.png" />
+	  <None Remove="Resources\Images\sentra.png" />
+	  <None Remove="Resources\Images\camaro.png" />
+	  <None Remove="Resources\Images\mustang.png" />
+	  <None Remove="Resources\Images\versa.png" />
+	  <None Remove="Resources\Images\corvette.png" />
+	  <None Remove="Resources\Fonts\Roboto-Italic.ttf" />
+	  <None Remove="Resources\Fonts\Manrope-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Roboto-BoldItalic.ttf" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="pages\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\carrito.png" />
+	  <BundleResource Include="Resources\Images\historial.png" />
+	  <BundleResource Include="Resources\Images\registro.png" />
+	  <BundleResource Include="Resources\Fonts\ArchivoNarrow-Italic-VariableFont_wght.ttf" />
+	  <BundleResource Include="Resources\Fonts\ArchivoNarrow-VariableFont_wght.ttf" />
+	  <BundleResource Include="Resources\Fonts\Manrope-VariableFont_wght.ttf" />
+	  <BundleResource Include="Resources\Fonts\Manrope-ExtraBold.ttf" />
+	  <BundleResource Include="Resources\Fonts\Manrope-Medium.ttf" />
+	  <BundleResource Include="Resources\Fonts\Roboto-Medium.ttf" />
+	  <BundleResource Include="Resources\Fonts\Roboto-Regular.ttf" />
+	  <BundleResource Include="Resources\Images\tesla.png" />
+	  <BundleResource Include="Resources\Images\sentra.png" />
+	  <BundleResource Include="Resources\Images\camaro.png" />
+	  <BundleResource Include="Resources\Images\mustang.png" />
+	  <BundleResource Include="Resources\Images\versa.png" />
+	  <BundleResource Include="Resources\Images\corvette.png" />
+	  <BundleResource Include="Resources\Fonts\Roboto-Italic.ttf" />
+	  <BundleResource Include="Resources\Fonts\Manrope-Regular.ttf" />
+	  <BundleResource Include="Resources\Fonts\Roboto-BoldItalic.ttf" />
+	</ItemGroup>
+</Project>

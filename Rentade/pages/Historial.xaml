@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             x:Class="Rentade.pages.Historial"
+             Title="Historial"
+             IconImageSource="historial.png">
+    <ScrollView>
+        <StackLayout >
+            <VerticalStackLayout>
+
+                <Label
+                    Text="Historial de registros"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="23"
+                    FontFamily="Roboto-Italic"
+                    VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    Padding="5"
+                    Margin="15"/>
+
+
+                <Label
+                    Margin="0"
+                    Padding="15"
+                    FontFamily="Manrope_Regular"
+                    Text="Consultar registro por rango de fechas:"
+                    FontSize="15"
+                    />
+
+                <StackLayout Orientation="Horizontal">
+
+                    <DatePicker
+                        Margin="5"
+                        x:Name="dtFechaGanancia1"
+                        TextColor="Black"
+                        Grid.Column="0"
+                        Format="yyyy/MM/dd"/>
+
+
+                    <DatePicker
+                        Margin="5"
+                        x:Name="dtFechaGanancia2"
+                        TextColor="Black"
+                        Grid.Column="1"
+                        Format="yyyy/MM/dd"/>
+
+                    <Button
+                        
+                        Margin="5"
+                        FontFamily="Manrope-Medium"
+                        x:Name="ConsultarGananciasFecha"
+                        Text="Consultar"
+                        Grid.Column="2"
+                        BackgroundColor="#5135D1"
+                        TextColor="White"
+                        FontSize="15"
+                        WidthRequest="150"
+                        Clicked="ConsultarGananciasFecha_Clicked"/>
+
+                </StackLayout>
+
+                <Label
+                    Margin="0"
+                    Padding="15"
+                    FontFamily="Manrope_Regular"
+                    Text="Consultar registros por Auto:"
+                    FontSize="15"/>
+            
+                <StackLayout Orientation="Horizontal">
+
+                
+
+                    <Picker Margin="5" x:Name="cbAuto" Title="Nombre del Auto" TextColor="Black" SelectedIndexChanged="cbAuto_SelectedIndexChanged" >
+                        <Picker.Items>
+                            <x:String>AUTOS</x:String>
+                            <x:String>Tesla</x:String>
+                            <x:String>Sentra</x:String>
+                            <x:String>Versa</x:String>
+                            <x:String>Camaro</x:String>
+                            <x:String>Mustang</x:String>
+                            <x:String>Corvette</x:String>
+                        </Picker.Items>
+
+                     </Picker>
+
+                    <Button
+                        Margin="5"
+                        FontFamily="Manrope-Medium"
+                        x:Name="ConsultarGananciasCarro"
+                        Text="Consultar"
+                        Grid.Column="2"
+                        BackgroundColor="#5135D1"
+                        TextColor="White"
+                        FontSize="15"
+                        WidthRequest="150"
+                        Clicked="ConsultarGananciasCarro_Clicked"/>
+
+                </StackLayout>
+
+
+
+                <syncfusion:SfDataGrid
+                    HeaderRowHeight="50"
+                    RowHeight="50"
+                    Margin="10"
+                    HeightRequest="320"
+                    x:Name="dataGrid"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    CellDoubleTapped="dataGrid_CellDoubleTapped" >
+                    <syncfusion:SfDataGrid.DefaultStyle>
+                        <syncfusion:DataGridStyle
+                            HeaderRowBackground="#5135D1"
+                            HeaderRowTextColor="White"
+                            RowBackground="#93A1D2"
+                            RowTextColor="#212121"/>
+
+                    </syncfusion:SfDataGrid.DefaultStyle>
+                
+
+                </syncfusion:SfDataGrid>
+
+                <Label
+                    WidthRequest="370"
+                    Text="Ganancias Totales:"
+                    FontFamily="Roboto-Italic"
+                    FontSize="20"/>
+                    
+
+                <Entry
+                    WidthRequest="370"
+                    x:Name="tbGanancias"
+                    Placeholder="Ganancias"
+                    Grid.Column="1"
+                    HeightRequest="50"
+                    TextColor="Black"
+                    FontSize="19"
+                    FontFamily="Roboto-BoldItalic"
+                    IsEnabled="False"
+
+                    />
+
+            </VerticalStackLayout>
+        
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

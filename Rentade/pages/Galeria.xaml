@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Rentade.pages.Galeria"
+             Title="Galeria"
+             IconImageSource="carrito.png">
+
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+            <Label
+                Text="Galeria de autos"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontFamily="Roboto-Italic"
+                FontSize="23"
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand"
+                Padding="5"
+                Margin="15"
+            />
+
+            <Frame
+                Grid.Row="1"
+                CornerRadius="10"
+                Margin="6">
+                <StackLayout>
+                    <Label Text="Tesla Model 3                   2018" TextColor="Black" FontSize="30" FontFamily="ArchivoNarrow" VerticalOptions="Start"/>
+                    <Image Source="tesla.png" HeightRequest="190" Aspect="AspectFill" BackgroundColor="Black"/>
+                    <Label Text="$1,000 por día" FontFamily="Manrope_BOLD" FontSize="25" Margin="2"/>
+                    <Label Text="Color | Blanco" FontFamily="Manrope_wght" FontSize="20" Margin="2"/>
+                    <Button x:Name="tesla" Clicked="tesla_Clicked" Text="RENTAR AHORA" FontFamily="Roboto-Medium" FontSize="30" Margin="6"/>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame
+                Grid.Row="1"
+                CornerRadius="10"
+                Margin="6">
+                <StackLayout>
+                    <Label Text="Nissan Versa                   2015" TextColor="Black" FontSize="30" FontFamily="ArchivoNarrow" VerticalOptions="Start"/>
+                    <Image Source="versa.png" HeightRequest="190" Aspect="AspectFill" BackgroundColor="Black"/>
+                    <Label Text="$350 por día" FontFamily="Manrope_BOLD" FontSize="25" Margin="2"/>
+                    <Label Text="Color | Negro" FontFamily="Manrope_wght" FontSize="20" Margin="2"/>
+                    <Button x:Name="versa" Clicked="versa_Clicked" Text="RENTAR AHORA"  FontFamily="Roboto-Medium" FontSize="30" Margin="6"/>
+                </StackLayout>
+            </Frame>
+
+
+
+            <Frame
+                Grid.Row="1"
+                CornerRadius="10"
+                Margin="6">
+                <StackLayout>
+                    <Label Text="Nissan Sentra                  2023" TextColor="Black" FontSize="30" FontFamily="ArchivoNarrow" VerticalOptions="Start"/>
+                    <Image Source="sentra.png" HeightRequest="200" Aspect="AspectFit" BackgroundColor="White"/>
+                    <Label Text="$350 por día" FontFamily="Manrope_BOLD" FontSize="25" Margin="2"/>
+                    <Label Text="Color | Naranja" FontFamily="Manrope_wght" FontSize="20" Margin="2"/>
+                    <Button x:Name="sentra" Clicked="sentra_Clicked" Text="RENTAR AHORA" FontFamily="Roboto-Medium" FontSize="30" Margin="6"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Grid.Row="1"
+                CornerRadius="10"
+                Margin="6">
+                <StackLayout>
+                    <Label Text="Camaro coupe                 2017" TextColor="Black" FontSize="30" FontFamily="ArchivoNarrow" VerticalOptions="Start"/>
+                    <Image Source="camaro.png" HeightRequest="200" Aspect="AspectFit" BackgroundColor="White"/>
+                    <Label Text="$900 por día" FontFamily="Manrope_BOLD" FontSize="25" Margin="2"/>
+                    <Label Text="Color | Rojo" FontFamily="Manrope_wght" FontSize="20" Margin="2"/>
+                    <Button x:Name="camaro" Clicked="camaro_Clicked" Text="RENTAR AHORA" FontFamily="Roboto-Medium" FontSize="30" Margin="6"/>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame
+                Grid.Row="1"
+                CornerRadius="10"
+                Margin="6">
+                <StackLayout>
+                    <Label Text="Ford Mustang                  2022" TextColor="Black" FontSize="30" FontFamily="ArchivoNarrow" VerticalOptions="Start"/>
+                    <Image Source="mustang.png" HeightRequest="180" Aspect="AspectFill" BackgroundColor="Black"/>
+                    <Label Text="$1,500 por día" FontFamily="Manrope_BOLD" FontSize="25" Margin="2"/>
+                    <Label Text="Color | Amarillo" FontFamily="Manrope_wght" FontSize="20" Margin="2"/>
+                    <Button x:Name="mustang" Clicked="mustang_Clicked" Text="RENTAR AHORA" FontFamily="Roboto-Medium" FontSize="30" Margin="6"/>
+                </StackLayout>
+            </Frame>
+
+
+
+            <Frame
+                Grid.Row="1"
+                CornerRadius="10"
+                Margin="6">
+                <StackLayout>
+                    <Label Text="Corvette Stinggray              2015" TextColor="Black" FontSize="30" FontFamily="ArchivoNarrow" VerticalOptions="Start"/>
+                    <Image Source="corvette.png" HeightRequest="190" Aspect="AspectFill" BackgroundColor="Black"/>
+                    <Label Text="$800 por día" FontFamily="Manrope_BOLD" FontSize="25" Margin="2"/>
+                    <Label Text="Color | Tinto" FontFamily="Manrope_wght" FontSize="20" Margin="2"/>
+                    <Button x:Name="corvette" Clicked="corvette_Clicked" Text="RENTAR AHORA" FontFamily="Roboto-Medium" FontSize="30" Margin="6"/>
+                </StackLayout>
+            </Frame>
+        
+        </VerticalStackLayout>
+
+    </ScrollView>
+    
+</ContentPage>

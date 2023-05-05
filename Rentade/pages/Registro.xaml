@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
+             x:Class="Rentade.pages.Registro"
+             IconImageSource="registro.png"
+             Title="Registro"
+             Appearing="ContentPage_Appearing">
+
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+            <Label
+                Text="Registro de la renta"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="23"
+                FontFamily="Roboto-Italic"
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand"
+                Padding="5"
+                Margin="15"
+            />
+
+            <Label 
+                Text="Datos del cliente:"
+                FontFamily="Manrope_Regular"
+                TextColor="Black"
+                FontSize="17"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                Margin="15"
+            />
+
+                <!--Registro de los datos del Cliente-->
+
+                <sf:SfTextInputLayout 
+                                  Hint="Cliente ID"
+                                  ContainerType="Outlined"
+                                  FocusedStrokeThickness="4"
+                                  UnfocusedStrokeThickness="2"
+                                  WidthRequest="370">
+                    <Entry
+                    x:Name="tbID"
+                    ClearButtonVisibility="WhileEditing"
+                    Completed="tbID_Completed"
+                    />
+
+                </sf:SfTextInputLayout>
+
+                <sf:SfTextInputLayout
+                                  Hint="Nombre"
+                                  ContainerType="Outlined"
+                                  FocusedStrokeThickness="4"
+                                  UnfocusedStrokeThickness="2"
+                                  WidthRequest="370">
+                    <Entry x:Name="tbNombre"
+                    ClearButtonVisibility="WhileEditing"
+                    />
+                </sf:SfTextInputLayout>
+
+                <sf:SfTextInputLayout 
+                                  Hint="Apellido"
+                                  ContainerType="Outlined"
+                                  FocusedStrokeThickness="4"
+                                  UnfocusedStrokeThickness="2"
+                                  WidthRequest="370">
+                    <Entry
+                    x:Name="tbApellido"
+                    ClearButtonVisibility="WhileEditing"
+                    />
+                </sf:SfTextInputLayout>
+
+                <sf:SfTextInputLayout  
+                                  Hint="Telefono"
+                                  ContainerType="Outlined"
+                                  FocusedStrokeThickness="4"
+                                  UnfocusedStrokeThickness="2"
+                                  WidthRequest="370">
+                    <Entry
+                    x:Name="tbTelefono"
+                    ClearButtonVisibility="WhileEditing"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    />
+                </sf:SfTextInputLayout>
+
+                <sf:SfTextInputLayout 
+                                  Hint="Domicilio"
+                                  ContainerType="Outlined"
+                                  FocusedStrokeThickness="4"
+                                  UnfocusedStrokeThickness="2"
+                                  WidthRequest="370">
+                    <Entry
+                    x:Name="tbDomicilio"
+                    ClearButtonVisibility="WhileEditing"
+                    />
+                </sf:SfTextInputLayout>
+
+                <!--Registro de los datos del Automovil-->
+
+                <Label 
+                    Text="Datos del Automovil:"
+                    TextColor="Black"
+                    FontFamily="Manrope_Regular"
+                    FontSize="17"
+                    VerticalOptions="Fill" 
+                    HorizontalOptions="Fill"
+                    Margin="15"/>
+
+                <Picker x:Name="cbAuto" WidthRequest="365" HeightRequest="50" Margin="15" Title="AUTOS" TextColor="Black" SelectedIndexChanged="cbAuto_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>AUTOS</x:String>
+                        <x:String>Tesla</x:String>
+                        <x:String>Sentra</x:String>
+                        <x:String>Versa</x:String>
+                        <x:String>Camaro</x:String>
+                        <x:String>Mustang</x:String>
+                        <x:String>Corvette</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <sf:SfTextInputLayout 
+                                      Hint="Nombre"
+                                      ContainerType="Outlined"
+                                      FocusedStrokeThickness="4"
+                                      UnfocusedStrokeThickness="2"
+                                      WidthRequest="370">
+                    <Entry
+                        x:Name="tbNombreCarro"
+                        ClearButtonVisibility="WhileEditing"
+                        />
+                </sf:SfTextInputLayout>
+                <sf:SfTextInputLayout 
+                                  Hint="Marca"
+                                  ContainerType="Outlined"
+                                  FocusedStrokeThickness="4"
+                                  UnfocusedStrokeThickness="2"
+                                  WidthRequest="370">
+                    <Entry
+                    x:Name="tbMarca"
+                    ClearButtonVisibility="WhileEditing"
+                    />
+                </sf:SfTextInputLayout>
+
+                <sf:SfTextInputLayout 
+                                  Hint="Modelo"
+                                  ContainerType="Outlined"
+                                  FocusedStrokeThickness="4"
+                                  UnfocusedStrokeThickness="2"
+                                  WidthRequest="370">
+                    <Entry
+                    x:Name="tbModelo"
+                    ClearButtonVisibility="WhileEditing"
+                    />
+                </sf:SfTextInputLayout>
+
+                 <sf:SfTextInputLayout 
+                                  Hint="Precio por día"
+                                  ContainerType="Outlined"
+                                  FocusedStrokeThickness="4"
+                                  UnfocusedStrokeThickness="2"
+                                  WidthRequest="370">
+                    <Entry
+                    x:Name="tbPrecio"
+                    ClearButtonVisibility="WhileEditing"
+                    />
+                </sf:SfTextInputLayout>
+
+                <Label Text="Fecha Inicio:"
+                       WidthRequest="360"
+                       FontSize="18"
+                       FontFamily="Manrope_Regular"
+                       TextColor="Black"
+                       Margin="10"/> 
+
+                <DatePicker x:Name="dpFechaInicio"
+                            WidthRequest="370"
+                            FontSize="18"
+                            Margin="10"
+                            Format="yyyy/MM/dd"
+                            />
+
+                <Label Text="Fecha Final:"
+                       WidthRequest="360"
+                       FontSize="18"
+                       FontFamily="Manrope_Regular"
+                       TextColor="Black"
+                       Margin="10"/> 
+
+                <DatePicker x:Name="dpFechaFinal"
+                            WidthRequest="370"
+                            FontSize="18"
+                            Margin="10"
+                            Format="yyyy/MM/dd"
+                            />
+
+                <sf:SfTextInputLayout Hint="Total:"
+                                  ContainerType="Outlined"
+                                  WidthRequest="370">
+                    <Entry
+                    x:Name="tbTotal"
+                    ClearButtonVisibility="WhileEditing"
+                    FontSize="24"
+                    Focused="tbTotal_Focused"
+                    />
+                </sf:SfTextInputLayout>                
+
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" >
+
+                <Button
+                    x:Name="registrar"
+                    FontFamily="Manrope-Medium"
+                    Text="REGISTRAR"
+                    WidthRequest="120"
+                    Clicked="registrar_Clicked"
+                    Margin="25"
+                    Padding="0"/>
+                   
+
+                <Button
+                    x:Name="eliminar"
+                    FontFamily="Manrope-Medium"
+                    Text="ELIMINAR"
+                    WidthRequest="120"
+                    Clicked="eliminar_Clicked"
+                    Margin="25"
+                    Padding="00"/>
+
+                <Button
+                    x:Name="actualizar"
+                    FontFamily="Manrope-Medium"
+                    WidthRequest="120"
+                    Margin="25"
+                    Padding="0"
+                    Text="Actualizar"
+                    Clicked="actualizar_Clicked"
+                />
+
+                <Button
+                    x:Name="Cancelar"
+                    FontFamily="Manrope-Medium"
+                    Clicked="Cancelar_Clicked"
+                    WidthRequest="120"
+                    Margin="25"
+                    Padding="0"
+                    Text="Cancelar"
+                 />
+
+                 </StackLayout>
+            </ScrollView>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
